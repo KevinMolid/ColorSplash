@@ -1,0 +1,68 @@
+body {
+    background: #fff;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-window {
+    max-width: 550px;
+    height: 550px;
+    max-height: 550px;
+    background: #1F2937;
+    display: grid;
+    grid-template-rows: 90px auto 45px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header header header"
+        "col1 col2 col3 col4 col5"
+        "hex1 hex2 hex3 hex4 hex5";
+    align-items: center;
+    justify-items: center;
+}
+
+.app-window header {
+    box-sizing: border-box;
+    width: 100%;
+    height: 90px;
+    padding: 24px 14px;
+    grid-area: header;
+}
+
+.app-window form {
+    box-sizing: border-box;
+    display: grid;
+    gap: 12px;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 4fr 2fr;
+}
+
+input, select, button {
+    cursor: pointer;
+}
+
+.app-window input {
+    width: 100%;
+    height: 43px;
+}
+
+.app-window select {
+    font-size: 1rem;
+    padding-left: 0.5em;
+    color: #D5D4D8;
+    background: #1F293A;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}
+
+.app-window button {
+    font-size: 0.75rem;
+    color: #fff;
+    background: #3D4B60;
+    border: none;
+    border-radius: 6px;
+}
+
+.color-hex {
+    font-size: 0.75rem;
+    color: #D5D4D8;
+}
