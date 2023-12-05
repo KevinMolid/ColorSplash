@@ -1,21 +1,21 @@
 body {
     background: #fff;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 .app-window {
-    max-width: 550px;
-    height: 550px;
-    max-height: 550px;
-    background: #1F2937;
+    height: 100svh;
+    min-height: 200px;
+    background: #111;
     display: grid;
     grid-template-rows: 90px auto 45px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-        "header header header header header"
-        "col1 col2 col3 col4 col5"
-        "hex1 hex2 hex3 hex4 hex5";
+        "header header header header header header"
+        "col1 col2 col3 col4 col5 col6"
+        "hex1 hex2 hex3 hex4 hex5 col6";
     align-items: center;
     justify-items: center;
 }
@@ -26,9 +26,12 @@ body {
     height: 90px;
     padding: 24px 14px;
     grid-area: header;
+    display: flex;
+    justify-content: center;
 }
 
 .app-window form {
+    max-width: 550px;
     box-sizing: border-box;
     display: grid;
     gap: 12px;
@@ -49,20 +52,58 @@ input, select, button {
     font-size: 1rem;
     padding-left: 0.5em;
     color: #D5D4D8;
-    background: #1F293A;
+    background: #333;
     border: 1px solid #D1D5DB;
     border-radius: 6px;
 }
 
 .app-window button {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: #fff;
-    background: #3D4B60;
+    background: #444;
     border: none;
     border-radius: 6px;
+}
+
+.app-window button:hover {
+    background: #555;
 }
 
 .color-hex {
     font-size: 0.75rem;
     color: #D5D4D8;
+}
+
+#color-1,
+#color-2,
+#color-3,
+#color-4,
+#color-5,
+#color-6 {
+    width: 100%;
+    height: 100%;
+}
+
+#color-1 {
+    background: #ffffff;
+}
+
+#color-2 {
+    background: #cccccc;
+}
+
+#color-3 {
+    background: #999999;
+}
+
+#color-4 {
+    background: #666666;
+}
+
+#color-5 {
+    background: #333333;
+}
+
+#color-6 {
+    background: #000000;
 }
