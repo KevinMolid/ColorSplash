@@ -24,6 +24,8 @@ function setColor(index, color){
     colorHexesArr[index].innerText = color
 }
 
+
+// Add event listener to form
 colorForm.addEventListener('submit', function(e){
     e.preventDefault()
 
@@ -54,5 +56,12 @@ colorForm.addEventListener('submit', function(e){
                 console.log(color.hex.value)
             }); */
         })
-
 })
+
+// add event listener to panels
+for (let i = 0; i < colorPanelsArr.length; i++){
+    colorPanelsArr[i].addEventListener('click', function(){
+        const color = colorHexesArr[i].innerText
+        console.log(color)
+    })
+}
