@@ -18,38 +18,41 @@
     </head>
 
     <body>
-        <main>
-            <div class="app-window">
-                <header>
-                    <form id="color-form">
-                        <input type="color" name="color">
-                        <select name="mode">
-                            <option value="monochrome">Monochrome</option>
-                            <option value="monochrome-dark">Monochrome-Dark</option>
-                            <option value="monochrome-light">Monochrome-Light</option>
-                            <option value="analogic">Analogic</option>
-                            <option value="complement">Complement</option>
-                            <option value="analogic-complement">Analogic-Complement</option>
-                            <option value="triad">Triad</option>
-                            <option value="quad">Quad</option>
-                        </select>
-                        <button>Get color scheme</button>
-                    </form>
-                </header>
-                <div class="color" id="color-1"></div>
-                <div class="color" id="color-2"></div>
-                <div class="color" id="color-3"></div>
-                <div class="color" id="color-4"></div>
-                <div class="color" id="color-5"></div>
-                <div class="color" id="color-6"></div>
-                <p class="color-hex" id="color-1-hex">#F55A5A</p>
-                <p class="color-hex" id="color-2-hex">#2B283A</p>
-                <p class="color-hex" id="color-3-hex">#FBF3AB</p>
-                <p class="color-hex" id="color-4-hex">#AAD1B6</p>
-                <p class="color-hex" id="color-5-hex">#A626D3</p>
-                <p class="color-hex" id="color-6-hex">#A626D3</p>
-            </div>
-        </main>
+        <div class="app-window">
+            <header>
+                <div class="logo">
+                    <img class="logo-img" src="images/colors-icon-4.png" />
+                    <h1 class="logo-txt">ColorSplash</h1>
+                </div>
+                <p class="subheading">Choose color and mode, and generate your color scheme!</p>
+            </header>
+            <form id="color-form">
+                <input type="color" name="color" value="#0990CA">
+                <select name="mode">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome-Dark</option>
+                    <option value="monochrome-light">Monochrome-Light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic-Complement</option>
+                    <option value="triad">Triad</option>
+                    <option value="quad">Quad</option>
+                </select>
+                <button>Get color scheme</button>
+            </form>
+            <div class="color" id="color-1"></div>
+            <div class="color" id="color-2"></div>
+            <div class="color" id="color-3"></div>
+            <div class="color" id="color-4"></div>
+            <div class="color" id="color-5"></div>
+            <div class="color" id="color-6"></div>
+            <p class="color-hex" id="color-1-hex">#05394F</p>
+            <p class="color-hex" id="color-2-hex">#065678</p>
+            <p class="color-hex" id="color-3-hex">#0873A1</p>
+            <p class="color-hex" id="color-4-hex">#0990CA</p>
+            <p class="color-hex" id="color-5-hex">#0AAEF4</p>
+            <p class="color-hex" id="color-6-hex">#30BCF8</p>
+        </div>
 
         <script src="index.js"></script>
     </body>

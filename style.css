@@ -10,28 +10,59 @@ body {
     min-height: 200px;
     background: #111;
     display: grid;
-    grid-template-rows: 90px auto 45px;
+    grid-template-rows: auto 90px 1fr 45px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "header header header header header header"
+        "menu menu menu menu menu menu"
         "col1 col2 col3 col4 col5 col6"
         "hex1 hex2 hex3 hex4 hex5 col6";
     align-items: center;
     justify-items: center;
 }
 
-.app-window header {
+header {
     box-sizing: border-box;
     width: 100%;
-    height: 90px;
-    padding: 24px 14px;
     grid-area: header;
+    padding: 1em;
+    margin: 0;
+    color: #fff;
+    background-color: #333;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.app-window form {
+.logo {
+    width: 100%;
     max-width: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 45px;
+    margin-right: 0.5em;
+}
+
+.logo-txt {
+    margin: 0;
+}
+
+.subheading {
+    color: #ccc;
+    width: 100%;
+    max-width: 550px;
+    margin: 0;
+}
+
+form {
+    grid-area: menu;
+    width: 100%;
+    max-width: 550px;
+    padding: 24px 0;
     box-sizing: border-box;
     display: grid;
     gap: 12px;
@@ -71,7 +102,7 @@ input, select, button {
 
 .color-hex {
     font-size: 0.75rem;
-    color: #D5D4D8;
+    color: #ccc;
 }
 
 #color-1,
@@ -85,25 +116,99 @@ input, select, button {
 }
 
 #color-1 {
-    background: #ffffff;
+    background: #05394F;
 }
 
 #color-2 {
-    background: #cccccc;
+    background: #065678;
 }
 
 #color-3 {
-    background: #999999;
+    background: #0873A1;
 }
 
 #color-4 {
-    background: #666666;
+    background: #0990CA;
 }
 
 #color-5 {
-    background: #333333;
+    background: #0AAEF4;
 }
 
 #color-6 {
-    background: #000000;
+    background: #30BCF8;
+}
+
+@media (max-width: 580px)  {
+    .app-window {
+        min-height: 600px;
+        grid-template-rows: auto auto 1fr 45px 1fr 45px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header header header"
+            "menu menu menu"
+            "col1 col2 col3"
+            "hex1 hex2 hex3"
+            "col4 col5 col6"
+            "hex4 hex5 hex6";
+        align-items: center;
+        justify-items: center;
+    }
+
+    #color-1 {
+        grid-area: col1;
+    }
+    #color-2 {
+        grid-area: col2;
+    }
+    #color-3 {
+        grid-area: col3;
+    }
+    #color-4 {
+        grid-area: col4;
+    }
+    #color-5 {
+        grid-area: col5;
+    }
+    #color-6 {
+        grid-area: col6;
+    }
+
+    #color-1-hex {
+        grid-area: hex1;
+    }
+    #color-2-hex {
+        grid-area: hex2;
+    }
+    #color-3-hex {
+        grid-area: hex3;
+    }
+    #color-4-hex {
+        grid-area: hex4;
+    }
+    #color-5-hex {
+        grid-area: hex5;
+    }
+    #color-6-hex {
+        grid-area: hex6;
+    }
+
+    .subheading {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding-inline: 1em;
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "input dropdown"
+        "button button";
+    }
+    
+    form button {
+        grid-area: button;
+    }
 }
