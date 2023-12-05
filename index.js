@@ -95,5 +95,5 @@ function copiedMessage(){
 
     setTimeout(() => {
         copiedModal.style.display = 'none'
-      }, "1000")
+      }, "1500")
 }

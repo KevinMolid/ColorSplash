@@ -237,6 +237,7 @@ footer {
 
 
 .copied-modal {
+    font-weight: 600;
     display: none;
     padding: 0.5em 1em;
     background-color: white;
