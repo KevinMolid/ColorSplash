@@ -19,6 +19,10 @@ const hex5 = document.getElementById('color-5-hex')
 const hex6 = document.getElementById('color-6-hex')
 const colorHexesArr = [hex1, hex2, hex3, hex4, hex5, hex6]
 
+// Copied modal
+const copiedModal = document.getElementById('copied-modal')
+
+
 function setColor(index, color){
     colorPanelsArr[index].style.background = color
     colorHexesArr[index].innerText = color
@@ -62,6 +66,34 @@ colorForm.addEventListener('submit', function(e){
 for (let i = 0; i < colorPanelsArr.length; i++){
     colorPanelsArr[i].addEventListener('click', function(){
         const color = colorHexesArr[i].innerText
-        console.log(color)
+        copyColor(color)
     })
+}
+
+// add event listener to hexes
+for (let i = 0; i < colorHexesArr.length; i++){
+    colorHexesArr[i].addEventListener('click', function(){
+        const color = colorHexesArr[i].innerText
+        copyColor(color)
+    })
+}
+
+
+function copyColor(color){
+    colorToClipboard(color)
+    copiedMessage()
+}
+
+
+function colorToClipboard(color){
+    navigator.clipboard.writeText(color)
+}
+
+
+function copiedMessage(){
+    copiedModal.style.display = 'block'
+
+    setTimeout(() => {
+        copiedModal.style.display = 'none'
+      }, "1000")
 }
